@@ -49,7 +49,7 @@ RUN pip install future typing
 RUN pip install numpy \
         tensorflow-gpu==${TENSORFLOW_VERSION} \
         keras \
-        h5py
+        h5py \
         regex \
         tqdm \
         fire
