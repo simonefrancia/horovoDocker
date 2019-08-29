@@ -50,6 +50,10 @@ RUN pip install numpy \
         tensorflow-gpu==${TENSORFLOW_VERSION} \
         keras \
         h5py
+        regex \
+        tqdm \
+        fire
+
 RUN pip install https://download.pytorch.org/whl/cu100/torch-${PYTORCH_VERSION}-$(python -c "import wheel.pep425tags as w; print('-'.join(w.get_supported()[0][:-1]))")-manylinux1_x86_64.whl \
         https://download.pytorch.org/whl/cu100/torchvision-${TORCHVISION_VERSION}-$(python -c "import wheel.pep425tags as w; print('-'.join(w.get_supported()[0][:-1]))")-manylinux1_x86_64.whl
 RUN pip install mxnet-cu100==${MXNET_VERSION}
@@ -86,8 +90,4 @@ RUN apt-get install -y --no-install-recommends subversion && \
     svn checkout https://github.com/horovod/horovod/trunk/examples && \
     rm -rf /examples/.svn
 
-RUN pip install regex \
-    tqdm \
-    fire
-
-WORKDIR "/root/src"
+WORKDIR "/src"
