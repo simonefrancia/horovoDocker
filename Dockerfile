@@ -86,4 +86,8 @@ RUN apt-get install -y --no-install-recommends subversion && \
     svn checkout https://github.com/horovod/horovod/trunk/examples && \
     rm -rf /examples/.svn
 
-WORKDIR "/examples"
+RUN pip install regex \
+    tqdm \
+    fire
+
+WORKDIR "/root/src"
