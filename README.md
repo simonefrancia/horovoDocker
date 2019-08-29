@@ -1,1 +1,1 @@
-# Horovod_py3.6_Dockerfile
+# Dockerfile for Docker ( python3.6 )
