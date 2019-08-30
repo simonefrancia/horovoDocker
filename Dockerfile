@@ -7,6 +7,7 @@ ENV TORCHVISION_VERSION=0.4.0
 ENV CUDNN_VERSION=7.6.0.64-1+cuda10.0
 ENV NCCL_VERSION=2.4.7-1+cuda10.0
 ENV MXNET_VERSION=1.5.0
+ENV LC_ALL=C.UTF-8
 
 # Python 2.7 or 3.6 is supported by Ubuntu Bionic out of the box
 ARG python=3.6
