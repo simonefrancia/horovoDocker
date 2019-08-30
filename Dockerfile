@@ -52,7 +52,8 @@ RUN pip install numpy \
         h5py \
         regex \
         tqdm \
-        fire
+        fire \
+        pandas
 
 RUN pip install https://download.pytorch.org/whl/cu100/torch-${PYTORCH_VERSION}-$(python -c "import wheel.pep425tags as w; print('-'.join(w.get_supported()[0][:-1]))")-manylinux1_x86_64.whl \
         https://download.pytorch.org/whl/cu100/torchvision-${TORCHVISION_VERSION}-$(python -c "import wheel.pep425tags as w; print('-'.join(w.get_supported()[0][:-1]))")-manylinux1_x86_64.whl
