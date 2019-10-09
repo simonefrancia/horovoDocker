@@ -1,1 +1,1 @@
-# Dockerfile for Docker ( python3.6 )
+# Dockerfile for Horovod ( python3.6 )
